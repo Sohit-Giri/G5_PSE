@@ -23,7 +23,7 @@ urlpatterns = [
     path('contact/', contact_view, name='contact'),
     path('edit_course/<int:course_id>/', edit_course, name='edit_course'),
     path('delete_course/<int:course_id>/', delete_course, name='delete_course'),
-    path('', login_view),  # Redirect root URL to login view
+    path('', home_view),  # Redirect root URL to login view
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
